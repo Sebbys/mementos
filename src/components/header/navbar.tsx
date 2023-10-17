@@ -20,15 +20,16 @@ export default function Navbar({ currentUser }: { currentUser: CurrentUser }) {
       )}>
       <div className='container h-full'>
         <div className='flex h-full  items-center justify-between'>
-          <Link href='/' className='flex items-center text-3xl font-bold'>
-            <Icons.dices />
-            <p>Dice</p>
-          </Link>
-          {/* <Link href='/courses' className='flex items-center text-2xl font-bold'>
-            <Icons.bookcopy />
-            <p>Courses</p>
-            <Icons.bookcopy />
-          </Link> */}
+          <div className='flex items-center text-3xl font-bold'>
+            <Link href='/' className='flex'>
+              <Icons.dices />
+              <p>Dice</p>
+            </Link>
+            <Link className='ml-4 sm:visible' href='/courses'>
+              Courses
+            </Link>
+          </div>
+
           <div className=' flex items-center gap-x-2'>
             <ThemeToggle />
             {currentUser ? (

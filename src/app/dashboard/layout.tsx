@@ -1,5 +1,7 @@
 import SidebarNav from '@/components/layout/sidebar-nav';
-
+import { getUser } from '../server/user';
+import redirect from 'next/navigation';
+import { log } from 'console';
 interface DashboardLayoutProps {
   children: React.ReactNode;
 }

@@ -8,11 +8,6 @@ import Icons from '../shared/icons';
 
 const navItems = [
   {
-    title: 'Projects',
-    href: '/dashboard/projects',
-    icon: Icons.projectPlus,
-  },
-  {
     title: 'Settings',
     href: '/dashboard/settings',
     icon: Icons.settings,

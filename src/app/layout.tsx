@@ -14,16 +14,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <Provider>
-      <html lang='en' suppressHydrationWarning={true}>
+    // <Provider>
+    <html lang='en' suppressHydrationWarning={true}>
+      <body className={inter.className}>
+        <div className='fixed h-screen w-full ' />
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
-          <div className='fixed h-screen w-full ' />
-          <body className={inter.className}>
-            <Header />
-            <main className='relative z-10'>{children}</main>
-          </body>
+          <Header />
+          <main className='relative z-10'>{children}</main>
         </ThemeProvider>
-      </html>
-    </Provider>
+      </body>
+    </html>
+    // </Provider>
   );
 }
