@@ -8,6 +8,7 @@ import { type CurrentUser } from '@/app/types';
 import ThemeToggle from '../shared/theme-toggle';
 import UserNav from '../layout/user-nav';
 import Icons from '@/components/shared/icons';
+import { NavigationMenuHome } from './nav-menu';
 
 export default function Navbar({ currentUser }: { currentUser: CurrentUser }) {
   const scrolled = useScroll(0);
@@ -20,14 +21,12 @@ export default function Navbar({ currentUser }: { currentUser: CurrentUser }) {
       )}>
       <div className='container h-full'>
         <div className='flex h-full  items-center justify-between'>
-          <div className='flex items-center text-3xl font-bold'>
+          <div className='flex items-center text-3xl font-bold gap-3'>
             <Link href='/' className='flex'>
               <Icons.dices />
               <p>Dice</p>
             </Link>
-            <Link className='ml-4 sm:visible' href='/courses'>
-              Courses
-            </Link>
+            <NavigationMenuHome />
           </div>
 
           <div className=' flex items-center gap-x-2'>
