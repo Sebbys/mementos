@@ -1,8 +1,8 @@
 import { compileMDX } from 'next-mdx-remote/rsc';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
-import rehypeSlug from 'rehype-slug';
-import 'highlight.js/styles/github-dark.min.css';
+import rehypeSlug from 'rehype-autolink-headings';
+import 'highlight.js/styles/github-dark.css';
 import Video from '@/components/courses/Video';
 import CustomImage from '@/components/courses/Custom-Image';
 

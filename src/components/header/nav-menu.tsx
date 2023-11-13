@@ -16,12 +16,12 @@ import {
 const components: { title: string; href: string; description: string }[] = [
   {
     title: 'Analytics',
-    href: '/courses/analytics',
+    href: '/courses/tags/analytics',
     description: 'Analytics Courses For Your Futures Sanity 😘',
   },
   {
     title: 'Engineering',
-    href: '/courses/engineering',
+    href: '/courses/tags/engineering',
     description: 'Engineering Courses For Your Mental Health 💀 ',
   },
 ];

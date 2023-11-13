@@ -1,9 +1,15 @@
-import { redirect } from 'next/navigation';
-import { getUser } from '../server/user';
+import Link from 'next/link';
+import { buttonVariants } from '@/components/ui/button';
+
 export default async function Courses() {
-  const currentUser = await getUser();
-  if (!currentUser || currentUser?.roles === 'PUBLIC') {
-    redirect('/');
-  }
-  return <div>This is Courses Pages</div>;
+  return (
+    <div className='flex flex-row gap-x-2 mt-4 justify-center prose prose-xl'>
+      <Link className={buttonVariants({ variant: 'secondary' })} href={'/courses/tags/analytics'}>
+        Analytics Courses
+      </Link>
+      <Link className={buttonVariants({ variant: 'secondary' })} href={'/courses/tags/engineering'}>
+        Engineering Courses
+      </Link>
+    </div>
+  );
 }
