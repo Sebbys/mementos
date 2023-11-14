@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { getPostsMeta } from '@/app/lib/posts';
 import ListItem from '@/components/shared/List-Item';
 import Link from 'next/link';
