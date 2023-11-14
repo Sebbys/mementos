@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/header';
-import Provider from '@/components/Providers';
 import { ThemeProvider } from '@/components/shared/theme-provider';
+import { Suspense } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,7 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className='fixed h-screen w-full ' />
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
           <Header />
-          <main className='relative z-10'>{children}</main>
+          <Suspense fallback={`<div> Test</div>`}>
+            <main className='relative z-10'>{children}</main>
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>
