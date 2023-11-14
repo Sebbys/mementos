@@ -16,6 +16,7 @@ export async function generateStaticParams() {
   if (!posts) return [];
 
   const tags = new Set(posts.map((post) => post.tags).flat());
+  // console.log(tags, '\n', posts);
 
   return Array.from(tags).map((tag) => ({ tag }));
 }

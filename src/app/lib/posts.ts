@@ -14,8 +14,8 @@ type Filetree = {
   ];
 };
 
-export async function getPostByName(fileName: String): Promise<BlogPost | undefined> {
-  const res = await fetch(`https://raw.githubusercontent.com/sebbys/DslayerContent/main/${fileName}`, {
+export async function getPostByName(fileName: string): Promise<BlogPost | undefined> {
+  const res = await fetch(`https://raw.githubusercontent.com/Sebbys/DslayerContent/main/${fileName}`, {
     headers: {
       Accept: 'application/vnd.github+json',
       Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
@@ -28,17 +28,20 @@ export async function getPostByName(fileName: String): Promise<BlogPost | undefi
   const rawMDX = await res.text();
 
   if (rawMDX === '404: Not Found') return undefined;
+
   const { frontmatter, content } = await compileMDX<{ title: string; date: string; tags: string[] }>({
     source: rawMDX,
-    components: { Video, CustomImage },
-
+    components: {
+      Video,
+      CustomImage,
+    },
     options: {
       parseFrontmatter: true,
       mdxOptions: {
         rehypePlugins: [
+          rehypeHighlight,
           rehypeSlug,
           [
-            rehypeHighlight,
             rehypeAutolinkHeadings,
             {
               behavior: 'wrap',
@@ -60,14 +63,16 @@ export async function getPostByName(fileName: String): Promise<BlogPost | undefi
 }
 
 export async function getPostsMeta(): Promise<Meta[] | undefined> {
-  const res = await fetch('https://api.github.com/repos/sebbys/DslayerContent/git/trees/main?recursive=1', {
+  const res = await fetch('https://api.github.com/repos/Sebbys/DslayerContent/git/trees/main?recursive=1', {
     headers: {
       Accept: 'application/vnd.github+json',
       Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
       'X-GitHub-Api-Version': '2022-11-28',
     },
   });
+
   if (!res.ok) return undefined;
+
   const repoFiletree: Filetree = await res.json();
 
   const filesArray = repoFiletree.tree.map((obj) => obj.path).filter((path) => path.endsWith('.mdx'));
@@ -81,5 +86,6 @@ export async function getPostsMeta(): Promise<Meta[] | undefined> {
       posts.push(meta);
     }
   }
+
   return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
