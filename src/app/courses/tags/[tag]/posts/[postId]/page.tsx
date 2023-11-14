@@ -4,7 +4,7 @@ import { getPostsMeta, getPostByName } from '@/app/lib/posts';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import 'highlight.js/styles/github-dark.css';
-
+import Comment from '@/components/shared/Comments';
 export const revalidate = 86400;
 
 type Props = {
@@ -69,6 +69,7 @@ export default async function Post({ params: { postId } }: Props) {
           </p>
         </div>
       </div>
+      <Comment />
     </>
   );
 }

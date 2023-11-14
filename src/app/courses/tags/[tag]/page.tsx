@@ -2,6 +2,8 @@ export const dynamic = 'force-static';
 import { getPostsMeta } from '@/app/lib/posts';
 import ListItem from '@/components/shared/List-Item';
 import Link from 'next/link';
+import { getUser } from '@/app/server/user';
+import { redirect } from 'next/navigation';
 
 export const revalidate = 1000;
 
@@ -29,6 +31,11 @@ export function generateMetadata({ params: { tag } }: Props) {
 }
 
 export default async function TagPostList({ params: { tag } }: Props) {
+  const user = await getUser();
+  if (!user || user.roles == 'PUBLIC') {
+    redirect('/cursed');
+  }
+
   const posts = await getPostsMeta(); //deduped!
   if (!posts) return <p className='mt-10 text-center'>Sorry, no posts available.</p>;
 
