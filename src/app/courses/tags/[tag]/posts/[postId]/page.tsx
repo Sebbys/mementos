@@ -4,8 +4,10 @@ import { getPostsMeta, getPostByName } from '@/app/lib/posts';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import 'highlight.js/styles/github-dark.css';
-import Comment from '@/components/shared/Comments';
 export const revalidate = 86400;
+
+import Loading from '@/app/courses/loading';
+import { Suspense } from 'react';
 
 type Props = {
   params: {
@@ -55,21 +57,23 @@ export default async function Post({ params: { postId } }: Props) {
 
   return (
     <>
-      <div className='max-w-xl flex justify-center'>
-        <div>
-          <h2 className='text-3xl mt-4 mb-0'>{meta.title}</h2>
-          <p className='text-sm'>{pubDate}</p>
-          <article>{content}</article>
-          <section>
-            <h3>Related:</h3>
-            <div className='flex flex-row gap-4'>{tags}</div>
-          </section>
-          <p className='mb-10'>
-            <Link href={`/courses/`}>← Back </Link>
-          </p>
+      <Suspense fallback={<Loading />}>
+        <div className='max-w-xl flex justify-center'>
+          <div>
+            <h2 className='text-3xl mt-4 mb-0'>{meta.title}</h2>
+            <p className='text-sm'>{pubDate}</p>
+            <article>{content}</article>
+            <section>
+              <h3>Related:</h3>
+              <div className='flex flex-row gap-4'>{tags}</div>
+            </section>
+            <p className='mb-10'>
+              <Link href={`/courses/`}>← Back </Link>
+            </p>
+          </div>
         </div>
-      </div>
-      {/* <Comment /> */}
+        {/* <Comment /> */}
+      </Suspense>
     </>
   );
 }

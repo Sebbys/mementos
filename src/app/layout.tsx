@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className='fixed h-screen w-full ' />
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
           <Header />
-          <Suspense fallback={`<div> Test</div>`}>
+          <Suspense fallback={`<div>Loding anjeeer</div>`}>
             <main className='relative z-10'>{children}</main>
           </Suspense>
         </ThemeProvider>

@@ -32,7 +32,9 @@ export function generateMetadata({ params: { tag } }: Props) {
 
 export default async function TagPostList({ params: { tag } }: Props) {
   const user = await getUser();
-  if (user?.roles == 'PUBLIC') {
+  if (!user) {
+    redirect('/cursed');
+  } else if (user?.roles == 'PUBLIC') {
     redirect('/cursed');
   }
 
