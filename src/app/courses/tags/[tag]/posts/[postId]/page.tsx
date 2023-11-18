@@ -1,4 +1,4 @@
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 import getFormattedDate from '@/app/lib/getFormattedDate';
 import { getPostsMeta, getPostByName } from '@/app/lib/posts';
 import { notFound } from 'next/navigation';
@@ -69,7 +69,7 @@ export default async function Post({ params: { postId } }: Props) {
           </p>
         </div>
       </div>
-      <Comment />
+      {/* <Comment /> */}
     </>
   );
 }

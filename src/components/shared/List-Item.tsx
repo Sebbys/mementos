@@ -11,20 +11,15 @@ export default function ListItem({ post }: Props) {
   const { id, title, date, tags } = post;
   const formattedDate = getFormattedDate(date);
   return (
-    <div>
-      {/* <li className='text-2xl dark:text-white/90'>
-    
-        <br />
-        <p className='text-sm mt-1'>{formattedDate}</p>
-      </li> */}
-      <Card className='mb-4'>
+    <div className='max-w-md'>
+      <Card>
         <CardHeader>
-          <Link href={`/courses/tags/${tags}/posts/${id}`}>
-            <CardTitle className='font-bold dark:hover:text-white'>{title}</CardTitle>
+          <Link className='no-underline text-2xl' href={`/courses/tags/${tags}/posts/${id}`}>
+            {title}
           </Link>
           <CardDescription className={badgeVariants({ variant: 'outline' })}>{tags} Course</CardDescription>
         </CardHeader>
-        <CardFooter>
+        <CardFooter className='m-0'>
           <p>{formattedDate}</p>
         </CardFooter>
       </Card>

@@ -1,4 +1,4 @@
-export const dynamic = 'force-static';
+// export const dynamic = 'force-dynamic';
 import { getPostsMeta } from '@/app/lib/posts';
 import ListItem from '@/components/shared/List-Item';
 import Link from 'next/link';
@@ -32,7 +32,7 @@ export function generateMetadata({ params: { tag } }: Props) {
 
 export default async function TagPostList({ params: { tag } }: Props) {
   const user = await getUser();
-  if (!user || user.roles == 'PUBLIC') {
+  if (user?.roles == 'PUBLIC') {
     redirect('/cursed');
   }
 
@@ -53,7 +53,7 @@ export default async function TagPostList({ params: { tag } }: Props) {
   return (
     <section>
       <h2 className='mt-4 text-3xl text-center'>Welcome to {tag} Courses 🖐🏻</h2>
-      <div className='flex flex-wrap justify-center gap-6 '>
+      <div className='grid grid-cols-2 justify-center gap-4 '>
         {tagPosts.map((post) => (
           <ListItem key={post.id} post={post} />
         ))}
