@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 import getFormattedDate from '@/app/lib/getFormattedDate';
 import { getPostsMeta, getPostByName } from '@/app/lib/posts';
 import { notFound } from 'next/navigation';
