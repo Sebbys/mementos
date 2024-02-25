@@ -41,7 +41,7 @@ export default async function TagPostList({ params: { tag } }: Props) {
   const posts = await getPostsMeta(); //deduped!
   if (!posts) return <p className='mt-10 text-center'>Sorry, no posts available.</p>;
 
-  const tagPosts = posts.filter((post) => post.tags.includes(tag));
+  const tagPosts = posts.filter((post) => post.tags && post.tags.includes(tag));
 
   if (!tagPosts.length) {
     return (
