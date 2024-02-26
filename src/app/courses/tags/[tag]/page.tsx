@@ -34,7 +34,7 @@ export default async function TagPostList({ params: { tag } }: Props) {
   const user = await getUser();
   if (!user) {
     redirect('/cursed');
-  } else if (user?.roles == 'PUBLIC') {
+  } else if (user?.roles === 'PUBLIC') {
     redirect('/cursed');
   }
 
