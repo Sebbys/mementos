@@ -1,10 +1,10 @@
 {
-  "commit": "a692a9a8b626abab03b082170a350d2ce83acb72",
-  "generated": "2024-03-14T04:14:12.253Z",
+  "commit": "c40cca9071be04b4013744d98e48b35a5fe93981",
+  "generated": "Thu, 14 Mar 2024 04:28:13 GMT",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "a692a9a8b626abab03b082170a350d2ce83acb72",
+        "commit": "8071d6de6bdc5bbec3ac7af24eb40a3ed197a52f",
         "hash": "936625378",
         "path": "outstatic/content/courses/test-analytics.md"
       },
