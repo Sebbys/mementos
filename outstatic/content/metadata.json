@@ -1,6 +1,6 @@
 {
-  "commit": "61ca54bacf7ec1e29e5a651c4d8cf6a90dbfea8d",
-  "generated": "Thu, 14 Mar 2024 04:37:46 GMT",
+  "commit": "b8bb768f13f8d1f8f66379b25a521bfbb653a555",
+  "generated": "2024-03-14T04:40:24.447Z",
   "metadata": [
     {
       "__outstatic": {
@@ -20,6 +20,24 @@
       "status": "draft",
       "title": "Test Analytics",
       "type": "analytics"
+    },
+    {
+      "__outstatic": {
+        "commit": "b8bb768f13f8d1f8f66379b25a521bfbb653a555",
+        "hash": "3938304194",
+        "path": "outstatic/content/dummytest/sasalomeee.md"
+      },
+      "author": {
+        "name": "Putu Rayno Sebastian",
+        "picture": "https://avatars.githubusercontent.com/u/94093311?v=4"
+      },
+      "collection": "dummytest",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-03-14T05:22:13.844Z",
+      "slug": "sasalomeee",
+      "status": "draft",
+      "title": "sasalomeee"
     }
   ]
 }
