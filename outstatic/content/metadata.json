@@ -1,11 +1,11 @@
 {
-  "commit": "da60ca0f92abb56d7d3a108cab366305e17cff74",
-  "generated": "Thu, 14 Mar 2024 04:10:57 GMT",
+  "commit": "a692a9a8b626abab03b082170a350d2ce83acb72",
+  "generated": "2024-03-14T04:12:47.526Z",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "632ef876e3de6eaf80be5826b07867326abdb3a7",
-        "hash": "2770611245",
+        "commit": "a692a9a8b626abab03b082170a350d2ce83acb72",
+        "hash": "936625378",
         "path": "outstatic/content/courses/test-analytics.md"
       },
       "author": {
@@ -18,7 +18,8 @@
       "publishedAt": "2024-03-14T04:50:58.380Z",
       "slug": "test-analytics",
       "status": "draft",
-      "title": "Test Analytics"
+      "title": "Test Analytics",
+      "type": "analytics"
     }
   ]
 }

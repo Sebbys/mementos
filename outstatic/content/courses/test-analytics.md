@@ -7,6 +7,7 @@ author:
 slug: 'test-analytics'
 description: ''
 coverImage: ''
+type: 'analytics'
 publishedAt: '2024-03-14T04:50:58.380Z'
 ---
 
