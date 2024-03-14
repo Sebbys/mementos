@@ -1,0 +1,24 @@
+{
+  "commit": "da60ca0f92abb56d7d3a108cab366305e17cff74",
+  "generated": "Thu, 14 Mar 2024 04:10:57 GMT",
+  "metadata": [
+    {
+      "__outstatic": {
+        "commit": "632ef876e3de6eaf80be5826b07867326abdb3a7",
+        "hash": "2770611245",
+        "path": "outstatic/content/courses/test-analytics.md"
+      },
+      "author": {
+        "name": "Putu Rayno Sebastian",
+        "picture": "https://avatars.githubusercontent.com/u/94093311?v=4"
+      },
+      "collection": "courses",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-03-14T04:50:58.380Z",
+      "slug": "test-analytics",
+      "status": "draft",
+      "title": "Test Analytics"
+    }
+  ]
+}
