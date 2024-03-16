@@ -1,6 +1,6 @@
 {
-  "commit": "9537a14ed61571f947296ecbca6ed9f14074b0e5",
-  "generated": "Thu, 14 Mar 2024 04:40:59 GMT",
+  "commit": "9a6d11c435f3fe8c5c5fffc5a8b9454f18c78946",
+  "generated": "2024-03-16T02:43:14.430Z",
   "metadata": [
     {
       "__outstatic": {
@@ -38,6 +38,25 @@
       "status": "draft",
       "title": "Test Analytics",
       "type": "analytics"
+    },
+    {
+      "__outstatic": {
+        "commit": "9a6d11c435f3fe8c5c5fffc5a8b9454f18c78946",
+        "hash": "1040759713",
+        "path": "outstatic/content/courses/test-engineering.md"
+      },
+      "author": {
+        "name": "Putu Rayno Sebastian",
+        "picture": "https://avatars.githubusercontent.com/u/94093311?v=4"
+      },
+      "collection": "courses",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-03-16T03:24:48.198Z",
+      "slug": "test-engineering",
+      "status": "draft",
+      "title": "Test Engineering",
+      "type": "engineering"
     }
   ]
 }
